@@ -120,7 +120,7 @@ class GUI implements ActionListener {
  
     public  GUI(){
         //frame
-        frame = new JFrame("My First GUI");
+        frame = new JFrame("Number Properties");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300,300);
         //button
