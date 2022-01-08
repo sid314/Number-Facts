@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
+
 class GUI implements ActionListener {
     JFrame frame;
     JButton button;
@@ -25,7 +26,7 @@ class GUI implements ActionListener {
             c++;
             i++;
         }while(i<=m);
-        System.out.println(c==2?"Prime":"not prime");
+       // System.out.println(c==2?"Prime":"not prime");
         String res =  c==2?"Prime":"not prime";
         res = res +"\n";
         return res;
