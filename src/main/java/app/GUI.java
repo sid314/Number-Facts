@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.*;
+//import java.awt.*;
 //import app.mainClass;
 
 public class GUI extends JFrame implements ActionListener{
@@ -45,8 +45,7 @@ public class GUI extends JFrame implements ActionListener{
    
         frame.setVisible(true);
 
-        ImageIcon image = new ImageIcon("Icon.png");
-        frame.setIconImage(image.getImage());
+      
         
         
         button.addActionListener(this);
