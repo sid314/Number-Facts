@@ -1,13 +1,13 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = 'app.GUI'
+mainClassName = 'app.mainClass'
 jar {
     archiveBaseName = 'APP'
-    archiveVersion =  '0.1.0'
+    archiveVersion =  '0.2.0'
     manifest {
     attributes(
-     // 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'app.GUI'
+     
+      'Main-Class': 'app.mainClass'
     )
   }
 }
