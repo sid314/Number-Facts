@@ -3,8 +3,6 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//import java.awt.*;
-//import app.mainClass;
 
 public class GUI extends JFrame implements ActionListener{
     JFrame frame;
@@ -12,9 +10,9 @@ public class GUI extends JFrame implements ActionListener{
     JPanel panel;
     JLabel inputLabel;
     JTextField inputtf;
-    JTextField outputtf;
     JLabel outputLabel;
-    JTextArea output;
+    JTextPane output;
+    JButton reset;
     String res = "";
     public  GUI(){
         //frame
@@ -23,6 +21,7 @@ public class GUI extends JFrame implements ActionListener{
         frame.setSize(300,300);
         //button
         button = new JButton("Submit");
+        reset = new JButton("Reset");
         //panel
         panel = new JPanel(); 
         //label
@@ -32,34 +31,39 @@ public class GUI extends JFrame implements ActionListener{
         inputtf = new JTextField(10); // characters accepted
         
         //text area
-        output = new JTextArea();
-
+        output = new JTextPane();
+        output.setEditable(false);
        // Components Added using Flow Layout
        
         panel.add(inputLabel); 
         panel.add(inputtf);
         panel.add(button);
         panel.add(output);
+        panel.add(reset);
         //allignment
         frame.getContentPane().add(BorderLayout.CENTER, panel);
-   
+        
         frame.setVisible(true);
-
-      
-        
-        
         button.addActionListener(this);
+        reset.addActionListener(this);
     }
+    
     @Override
-    
         public void actionPerformed(ActionEvent e) {
-            int n=Integer.parseInt(inputtf.getText());
-    
-             res = res + mainClass.prime(n)+ mainClass.SumOfEvenDigits(n)+mainClass.SumOfDigits(n)+mainClass.SumOfOddDigits(n)+mainClass.Automorphic(n)+ mainClass.Palindrome(n)+mainClass.EvenDigit(n)+mainClass.OddDigit(n);
-             output.append(res);
-              
-        
-    }
-    
-  
+           
+            if(e.getSource()==button){
+                 int n=Integer.parseInt(inputtf.getText());
+                 res = res + mainClass.prime(n)+ mainClass.SumOfEvenDigits(n)+
+                 mainClass.SumOfDigits(n)+mainClass.SumOfOddDigits(n)+mainClass.Automorphic(n)+
+                 mainClass.Palindrome(n)+mainClass.EvenDigit(n)+mainClass.OddDigit(n);
+                 output.setText(res);
+            }
+            else if(e.getSource()==reset){
+             
+             res = "";
+             output.setText("");
+             inputtf.setText("");
+         }
+            
+     }
 }
