@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\APP-0.4.0.jar
+set CLASSPATH=%APP_HOME%\lib\APP-0.4.1.jar
 
 
 @rem Execute school

@@ -50,7 +50,7 @@ public class GUI extends JFrame implements ActionListener{
     
     @Override
         public void actionPerformed(ActionEvent e) {
-           
+           res = "";
             if(e.getSource()==button){
                  int n=Integer.parseInt(inputtf.getText());
                  res = res + mainClass.prime(n)+ mainClass.SumOfEvenDigits(n)+
