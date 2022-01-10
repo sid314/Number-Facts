@@ -2,8 +2,7 @@ package app;
 class mainClass {
  public static void main(String[] args){
     GUI main = new GUI();   
-    main.output.selectAll();
-    main.output.replaceSelection(null);
+   
   }
    public static String prime(int n){
         int m=n,c=0,i=1;

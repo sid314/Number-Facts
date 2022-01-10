@@ -3,7 +3,7 @@ apply plugin: 'application'
 mainClassName = 'app.mainClass'
 jar {
     archiveBaseName = 'APP'
-    archiveVersion =  '0.3.1'
+    archiveVersion =  '0.3.2'
     manifest {
     attributes(
      
