@@ -11,7 +11,7 @@ public class GUI extends JFrame implements ActionListener{
     JLabel inputLabel;
     JTextField inputtf;
     JLabel outputLabel;
-    JTextPane output;
+    JTextArea output;
     JButton reset;
     String res = "";
     public  GUI(){
@@ -31,7 +31,7 @@ public class GUI extends JFrame implements ActionListener{
         inputtf = new JTextField(10); // characters accepted
         
         //text area
-        output = new JTextPane();
+        output = new JTextArea();
         output.setEditable(false);
        // Components Added using Flow Layout
        
