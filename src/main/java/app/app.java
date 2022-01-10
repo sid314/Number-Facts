@@ -1,7 +1,8 @@
 package app;
 class mainClass {
  public static void main(String[] args){
-    GUI main = new GUI();   
+    GUI main = new GUI();  
+    main.dispose(); 
    
   }
    public static String prime(int n){
@@ -11,7 +12,7 @@ class mainClass {
             c++;
             i++;
         }while(i<=m);
-        String res =  c==2?"Prime":"not prime";
+        String res =  c==2?"Prime":"Not Prime";
         res = res +"\n";
         return res;
     }
@@ -22,7 +23,7 @@ class mainClass {
                m/=10;
            }
            int r = sq%(int)Math.pow(10,k);
-           String res = r==n?"automorphic":"not automorphic";
+           String res = r==n?"Automorphic":"Not Automorphic";
            res = res+"\n";
            return res;
     }
@@ -98,8 +99,74 @@ class mainClass {
         }
         String res = "Sum of digits = "+ s;
         res = res+"\n";
-           return res;}
-    
+           return res;
+        }
+    public static String SpyNumber(int n){
+      int m=n, s= 0, p=1;
+      while(m!=0){
+          int d = m%10;
+          s+=d;
+          p*=d;
+          m/=10;
+      }
+      String res = s==p?"Spy Number":"Not Spy Number";
+      res = res +"\n";
+      return res;
+    }
+    public static String Niven(int n){
+    int m = n, s= 0;
+    while (m!=0) {
+        int d = m%10;
+        s+=d;
+        m/=10;
+    }
+    String res = n%s==0?"Niven number":"Not Niven Number";
+    res = res +"\n";
+    return res;
+    }
+    public static String Neon(int n){
+        int m = n*n,s=0;
+        while (m!=0) {
+            int d = m%10;
+            s +=d;
+            m/=10;
+        }
+        String res = s==n?"Neon number":"Not Neon Number";
+        res = res+"\n";
+        return res;
+    }
+    public static String Buzz (int n){
+        String res = (n%7==0)||(n%10==7)?"Buzz Number":"Not A Buzz Number";
+        res = res+"\n";
+        return res;
+    }
+    public static String pronic(int n){
+        int f = 0;
+        for (int i =1;i<=n;i++){
+         if(i*(i+1)==n){
+             f=1;
+             break;
+         }
+        }
+        String res = f==1?"Pronic":"Not Pronic";
+        res = res +"\n";
+        return res;
+    }
+    public static String Special(int n){
+        int m=n,s = 0;
+       while (m!=0) {
+           int d = m%10;
+           int f=1;
+           for (int i = 1; i<=d;i++) {
+               f*=i;
+           }
+           s+=f;
+           m/=10;
+       }
+       String res = s==n?"Special":"Not Special";
+       res = res+"\n";
+       return res;
+    }
  }
    
     

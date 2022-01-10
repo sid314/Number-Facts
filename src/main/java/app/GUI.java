@@ -55,7 +55,9 @@ public class GUI extends JFrame implements ActionListener{
                  int n=Integer.parseInt(inputtf.getText());
                  res = res + mainClass.prime(n)+ mainClass.SumOfEvenDigits(n)+
                  mainClass.SumOfDigits(n)+mainClass.SumOfOddDigits(n)+mainClass.Automorphic(n)+
-                 mainClass.Palindrome(n)+mainClass.EvenDigit(n)+mainClass.OddDigit(n);
+                 mainClass.Palindrome(n)+mainClass.EvenDigit(n)+mainClass.OddDigit(n)+mainClass.SpyNumber(n)+
+                 mainClass.Niven(n)+mainClass.Neon(n)+mainClass.Buzz(n)+
+                 mainClass.pronic(n)+mainClass.Special(n);
                  output.setText(res);
             }
             else if(e.getSource()==reset){
