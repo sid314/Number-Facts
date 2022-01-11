@@ -63,8 +63,8 @@ public class GUI extends JFrame implements ActionListener{
             else if(e.getSource()==reset){
              
              res = "";
-             output.setText("");
-             inputtf.setText("");
+             output.setText(null);
+             inputtf.setText(null);
          }
             
      }

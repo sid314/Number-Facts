@@ -3,8 +3,7 @@ class mainClass {
  public static void main(String[] args){
     GUI main = new GUI();  
     main.dispose(); 
-   
-  }
+   }
    public static String prime(int n){
         int m=n,c=0,i=1;
         do{
@@ -12,9 +11,7 @@ class mainClass {
             c++;
             i++;
         }while(i<=m);
-        String res =  c==2?"Prime":"Not Prime";
-        res = res +"\n";
-        return res;
+        return (c==2?"Prime":"Not Prime")+"\n";
     }
     public static String Automorphic(int n){
         int sq= n*n, k = 0, m=n;
@@ -23,9 +20,7 @@ class mainClass {
                m/=10;
            }
            int r = sq%(int)Math.pow(10,k);
-           String res = r==n?"Automorphic":"Not Automorphic";
-           res = res+"\n";
-           return res;
+           return (r==n?"Automorphic":"Not Automorphic")+"\n" ;
     }
     public static String Palindrome(int n){
         int m= n,r=0;
@@ -34,9 +29,7 @@ class mainClass {
             r= r*10+d;
             m/=10;
         }
-        String res = r==n?"Palindrome":"Not palindrome";
-        res = res+"\n";
-           return res;
+        return (r==n?"Palindrome":"Not palindrome")+"\n";
     }
     public static String EvenDigit(int n){
         int m =n, c= 0;
@@ -44,13 +37,10 @@ class mainClass {
             int d = m%10;
             if(d%2==0){
                 c++;
-               
-            }
+               }
             m/=10;
         }
-        String res = "Number of even digits = "+ c;
-        res = res+"\n";
-           return res;
+         return "Number of even digits = "+ c+"\n";
     }
     public static String OddDigit(int n){
         int m =n, c= 0;
@@ -61,9 +51,7 @@ class mainClass {
             }
             m/=10;
         }
-        String res = "No of Odd digits ="+ c;
-        res = res+"\n";
-           return res;
+        return "No of Odd digits ="+ c+"\n";
     }
     public static String SumOfEvenDigits(int n){
         int m =n, s= 0;
@@ -73,9 +61,7 @@ class mainClass {
             s=s+d;
             m/=10;
         }
-        String res = "Sum of Even digits = "+ s;
-        res = res+"\n";
-           return res;
+         return "Sum of Even digits = "+ s+"\n";
     }
     public static String SumOfOddDigits(int n){
         int m =n, s= 0;
@@ -85,9 +71,7 @@ class mainClass {
             s=s+d;
             m/=10;
         }
-        String res = "Sum of odd digits ="+ s;
-        res = res+"\n";
-           return res;
+        return "Sum of odd digits ="+ s+"\n";
         }
     public static String SumOfDigits(int n){
         int m =n, s= 0;
@@ -97,9 +81,7 @@ class mainClass {
             s=s+d;
             m/=10;
         }
-        String res = "Sum of digits = "+ s;
-        res = res+"\n";
-           return res;
+         return "Sum of digits = "+ s+"\n";
         }
     public static String SpyNumber(int n){
       int m=n, s= 0, p=1;
@@ -109,9 +91,7 @@ class mainClass {
           p*=d;
           m/=10;
       }
-      String res = s==p?"Spy Number":"Not Spy Number";
-      res = res +"\n";
-      return res;
+     return (s==p?"Spy Number":"Not Spy Number")+"\n";
     }
     public static String Niven(int n){
     int m = n, s= 0;
@@ -119,10 +99,8 @@ class mainClass {
         int d = m%10;
         s+=d;
         m/=10;
-    }
-    String res = n%s==0?"Niven number":"Not Niven Number";
-    res = res +"\n";
-    return res;
+        }
+    return (n%s==0?"Niven number":"Not Niven Number")+"\n";
     }
     public static String Neon(int n){
         int m = n*n,s=0;
@@ -131,14 +109,10 @@ class mainClass {
             s +=d;
             m/=10;
         }
-        String res = s==n?"Neon number":"Not Neon Number";
-        res = res+"\n";
-        return res;
+        return (s==n?"Neon number":"Not Neon Number")+"\n";
     }
     public static String Buzz (int n){
-        String res = (n%7==0)||(n%10==7)?"Buzz Number":"Not A Buzz Number";
-        res = res+"\n";
-        return res;
+       return ((n%7==0)||(n%10==7)?"Buzz Number":"Not A Buzz Number")+"\n";
     }
     public static String pronic(int n){
         int f = 0;
@@ -148,9 +122,7 @@ class mainClass {
              break;
          }
         }
-        String res = f==1?"Pronic":"Not Pronic";
-        res = res +"\n";
-        return res;
+        return (f==1?"Pronic":"Not Pronic")+"\n";
     }
     public static String Special(int n){
         int m=n,s = 0;
@@ -163,10 +135,8 @@ class mainClass {
            s+=f;
            m/=10;
        }
-       String res = s==n?"Special":"Not Special";
-       res = res+"\n";
-       return res;
-    }
+       return (s==n?"Special":"Not Special")+"\n";
+     }
  }
    
     
