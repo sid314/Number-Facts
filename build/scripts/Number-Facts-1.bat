@@ -17,7 +17,7 @@
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
-@rem  school startup script for Windows
+@rem  Number-Facts-1 startup script for Windows
 @rem
 @rem ##########################################################################
 
@@ -32,7 +32,7 @@ set APP_HOME=%DIRNAME%..
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
-@rem Add default JVM options here. You can also use JAVA_OPTS and SCHOOL_OPTS to pass JVM options to this script.
+@rem Add default JVM options here. You can also use JAVA_OPTS and NUMBER_FACTS_1_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
 
 @rem Find java.exe
@@ -70,17 +70,17 @@ goto fail
 set CLASSPATH=%APP_HOME%\lib\APP-0.4.2.jar
 
 
-@rem Execute school
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SCHOOL_OPTS%  -classpath "%CLASSPATH%" app.mainClass %*
+@rem Execute Number-Facts-1
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %NUMBER_FACTS_1_OPTS%  -classpath "%CLASSPATH%" app.mainClass %*
 
 :end
 @rem End local scope for the variables with windows NT shell
 if "%ERRORLEVEL%"=="0" goto mainEnd
 
 :fail
-rem Set variable SCHOOL_EXIT_CONSOLE if you need the _script_ return code instead of
+rem Set variable NUMBER_FACTS_1_EXIT_CONSOLE if you need the _script_ return code instead of
 rem the _cmd.exe /c_ return code!
-if  not "" == "%SCHOOL_EXIT_CONSOLE%" exit 1
+if  not "" == "%NUMBER_FACTS_1_EXIT_CONSOLE%" exit 1
 exit /b 1
 
 :mainEnd
