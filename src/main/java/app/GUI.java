@@ -3,7 +3,12 @@ package app;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class GUI extends JFrame implements ActionListener {
 
@@ -18,22 +23,22 @@ public class GUI extends JFrame implements ActionListener {
   String res = "";
 
   public GUI() {
-    //frame
+    // frame
     frame = new JFrame("Number Properties");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(300, 300);
-    //button
+    // button
     button = new JButton("Submit");
     reset = new JButton("Reset");
-    //panel
+    // panel
     panel = new JPanel();
-    //label
+    // label
     inputLabel = new JLabel("Enter a number");
 
-    //text field
+    // text field
     inputtf = new JTextField(10); // characters accepted
 
-    //text area
+    // text area
     output = new JTextArea();
     output.setEditable(false);
     // Components Added using Flow Layout
@@ -43,7 +48,7 @@ public class GUI extends JFrame implements ActionListener {
     panel.add(button);
     panel.add(output);
     panel.add(reset);
-    //allignment
+    // allignment
     frame.getContentPane().add(BorderLayout.CENTER, panel);
 
     frame.setVisible(true);
@@ -56,22 +61,28 @@ public class GUI extends JFrame implements ActionListener {
     res = "";
     if (e.getSource() == button) {
       int n = Integer.parseInt(inputtf.getText());
-      res =
-        res +
-        mainClass.prime(n) +
-        mainClass.SumOfEvenDigits(n) +
-        mainClass.SumOfDigits(n) +
-        mainClass.SumOfOddDigits(n) +
-        mainClass.Automorphic(n) +
-        mainClass.Palindrome(n) +
-        mainClass.EvenDigit(n) +
-        mainClass.OddDigit(n) +
-        mainClass.SpyNumber(n) +
-        mainClass.Niven(n) +
-        mainClass.Neon(n) +
-        mainClass.Buzz(n) +
-        mainClass.pronic(n) +
-        mainClass.Special(n);
+      res = res +
+          mainClass.prime(n) +
+          mainClass.SumOfEvenDigits(n) +
+          mainClass.SumOfDigits(n) +
+          mainClass.SumOfOddDigits(n) +
+          mainClass.Automorphic(n) +
+          mainClass.Palindrome(n) +
+          mainClass.EvenDigit(n) +
+          mainClass.OddDigit(n) +
+          mainClass.SpyNumber(n) +
+          mainClass.Niven(n) +
+          mainClass.Neon(n) +
+          mainClass.Buzz(n) +
+          mainClass.pronic(n) +
+          mainClass.Special(n) +
+          mainClass.Fascinating(n) +
+          mainClass.Duck(n) +
+          mainClass.Disarium(n) +
+          mainClass.Happy(n) +
+          mainClass.Magic(n) +
+          mainClass.Unique(n) +
+          mainClass.Deficient(n);
       output.setText(res);
     } else if (e.getSource() == reset) {
       res = "";
